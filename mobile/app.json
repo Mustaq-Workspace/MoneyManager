@@ -1,0 +1,55 @@
+{
+  "expo": {
+    "name": "Money Manager Simple",
+    "slug": "money-manager-simple",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/splash-icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.moneymanager.simple",
+      "infoPlist": {
+        "NSCameraUsageDescription": "This app uses the camera to capture and analyze bills for automatic expense entry.",
+        "NSPhotoLibraryUsageDescription": "This app accesses your photo library to select bill images for analysis."
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      },
+      "package": "com.moneymanager.simple",
+      "permissions": [
+        "android.permission.CAMERA",
+        "android.permission.READ_EXTERNAL_STORAGE",
+        "android.permission.WRITE_EXTERNAL_STORAGE"
+      ]
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Allow Money Manager Simple to access your camera to capture bills."
+        }
+      ],
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "Allow Money Manager Simple to access your photo library to select bill images."
+        }
+      ]
+    ]
+  }
+}
