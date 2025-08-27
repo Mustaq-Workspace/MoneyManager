@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Navigate, Link } from 'react-router-dom';
 import { Home, Plus, BarChart3, Settings, List } from 'lucide-react';
 import LandingPage from './components/LandingPage';
 import Login from './components/Login';
@@ -14,7 +14,14 @@ import { authService } from './services/auth';
 import './App.css';
 
 function App() {
+  const [authVersion, setAuthVersion] = React.useState(0);
   const isAuthenticated = authService.isAuthenticated();
+
+  React.useEffect(() => {
+    const onAuthChanged = () => setAuthVersion((v) => v + 1);
+    window.addEventListener('auth-changed', onAuthChanged);
+    return () => window.removeEventListener('auth-changed', onAuthChanged);
+  }, []);
 
   return (
     <Router>
@@ -87,10 +94,10 @@ function App() {
 
 function NavLink({ to, icon, label }) {
   return (
-    <a href={to} className="nav-link">
+    <Link to={to} className="nav-link">
       <div className="nav-icon">{icon}</div>
       <span className="nav-label">{label}</span>
-    </a>
+    </Link>
   );
 }
 

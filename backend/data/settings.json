@@ -1,1 +1,23 @@
-[]
+[
+  {
+    "user_id": "0caa7955-31e3-4450-98a6-9d1f63c6874a",
+    "key": "monthly_budget",
+    "value": "1000",
+    "created_at": "2025-08-27T15:38:10.230Z",
+    "updated_at": "2025-08-27T15:38:10.230Z"
+  },
+  {
+    "user_id": "0caa7955-31e3-4450-98a6-9d1f63c6874a",
+    "key": "currency",
+    "value": "USD",
+    "created_at": "2025-08-27T15:38:10.230Z",
+    "updated_at": "2025-08-27T15:38:10.230Z"
+  },
+  {
+    "user_id": "0caa7955-31e3-4450-98a6-9d1f63c6874a",
+    "key": "default_category",
+    "value": "Others",
+    "created_at": "2025-08-27T15:38:10.230Z",
+    "updated_at": "2025-08-27T15:38:10.230Z"
+  }
+]

@@ -1,1 +1,10 @@
-[]
+[
+  {
+    "id": "0caa7955-31e3-4450-98a6-9d1f63c6874a",
+    "name": "Shaik Mustaq Ahmed",
+    "email": "skmustaqahmed@gmail.com",
+    "password": "$2a$10$vyvOpwO9cbH7Jqc/03rVdO6EhY4ua4wnDOo4Lff8DYg.RMtwLgW0q",
+    "created_at": "2025-08-27T15:38:10.228Z",
+    "updated_at": "2025-08-27T15:38:10.228Z"
+  }
+]

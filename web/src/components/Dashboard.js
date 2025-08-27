@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Plus, TrendingUp, TrendingDown, DollarSign, Calendar, BarChart3, LogOut, User } from 'lucide-react';
+import { Plus, TrendingUp, TrendingDown, DollarSign, Calendar, BarChart3, User } from 'lucide-react';
 import { expenseAPI, statisticsAPI, settingsAPI } from '../services/api';
-import { authService } from '../services/auth';
 import { 
   formatCurrency, 
   formatDate, 
@@ -23,14 +22,10 @@ const Dashboard = () => {
   const [user, setUser] = useState(null);
 
   useEffect(() => {
-    const currentUser = authService.getCurrentUser();
+    const currentUser = JSON.parse(localStorage.getItem('user') || 'null');
     setUser(currentUser);
     loadDashboardData();
   }, []);
-
-  const handleLogout = () => {
-    authService.logout();
-  };
 
   const loadDashboardData = async () => {
     try {
@@ -99,7 +94,7 @@ const Dashboard = () => {
 
   return (
     <div className="dashboard">
-      {/* Header with User Info and Logout */}
+      {/* Header with User Info */}
       <div className="card mb-4">
         <div className="flex justify-between items-center">
           <div className="flex items-center space-x-3">
@@ -114,11 +109,10 @@ const Dashboard = () => {
             </div>
           </div>
           <button
-            onClick={handleLogout}
-            className="flex items-center space-x-2 px-4 py-2 text-gray-600 hover:text-red-600 hover:bg-red-50 rounded-lg transition-colors"
+            onClick={() => navigate('/settings')}
+            className="btn btn-secondary"
           >
-            <LogOut className="h-4 w-4" />
-            <span>Logout</span>
+            Account Settings
           </button>
         </div>
       </div>

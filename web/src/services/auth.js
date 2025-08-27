@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_BASE_URL = process.env.REACT_APP_API_URL || 'http://localhost:5000/api';
+export const API_BASE_URL = process.env.REACT_APP_API_URL || 'http://localhost:5000/api';
 
 const authAPI = axios.create({
   baseURL: API_BASE_URL,
@@ -8,6 +8,15 @@ const authAPI = axios.create({
     'Content-Type': 'application/json',
   },
 });
+
+function emitAuthChanged() {
+  try {
+    const event = new Event('auth-changed');
+    window.dispatchEvent(event);
+  } catch (_) {
+    // no-op in non-browser environments
+  }
+}
 
 // Request interceptor to add auth token
 authAPI.interceptors.request.use(
@@ -33,6 +42,7 @@ authAPI.interceptors.response.use(
       // Token expired or invalid
       localStorage.removeItem('token');
       localStorage.removeItem('user');
+      emitAuthChanged();
       window.location.href = '/login';
     }
     return Promise.reject(error);
@@ -47,6 +57,7 @@ export const authService = {
     if (response.data.token) {
       localStorage.setItem('token', response.data.token);
       localStorage.setItem('user', JSON.stringify(response.data.user));
+      emitAuthChanged();
     }
     return response.data;
   },
@@ -57,6 +68,7 @@ export const authService = {
     if (response.data.token) {
       localStorage.setItem('token', response.data.token);
       localStorage.setItem('user', JSON.stringify(response.data.user));
+      emitAuthChanged();
     }
     return response.data;
   },
@@ -65,6 +77,7 @@ export const authService = {
   logout: () => {
     localStorage.removeItem('token');
     localStorage.removeItem('user');
+    emitAuthChanged();
     window.location.href = '/';
   },
 
