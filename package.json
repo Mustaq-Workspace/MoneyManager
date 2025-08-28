@@ -15,10 +15,19 @@
     "setup": "node setup.js",
     "postinstall": "echo 'Run npm run setup to complete the installation'"
   },
-  "keywords": ["expense-tracker", "money-manager", "react", "react-native", "nodejs"],
+  "keywords": [
+    "expense-tracker",
+    "money-manager",
+    "react",
+    "react-native",
+    "nodejs"
+  ],
   "author": "Your Name",
   "license": "MIT",
   "devDependencies": {
     "concurrently": "^8.2.2"
+  },
+  "dependencies": {
+    "expo": "^53.0.20"
   }
 }
