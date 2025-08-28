@@ -6,5 +6,13 @@
     "password": "$2a$10$vyvOpwO9cbH7Jqc/03rVdO6EhY4ua4wnDOo4Lff8DYg.RMtwLgW0q",
     "created_at": "2025-08-27T15:38:10.228Z",
     "updated_at": "2025-08-27T15:38:10.228Z"
+  },
+  {
+    "id": "227289cc-1863-46a5-be71-ba82f351f86c",
+    "name": "Shaik Mustaq Ahmed",
+    "email": "mustaqonlineincome@gmail.com",
+    "password": "$2a$10$szgxdNy552jtJg3gHDhAHuA97gdY1m1zl72x2RxHCump4E9boB13a",
+    "created_at": "2025-08-28T17:53:27.404Z",
+    "updated_at": "2025-08-28T17:53:27.404Z"
   }
 ]

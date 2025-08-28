@@ -19,5 +19,37 @@
     "value": "Others",
     "created_at": "2025-08-27T15:38:10.230Z",
     "updated_at": "2025-08-27T15:38:10.230Z"
+  },
+  {
+    "user_id": "227289cc-1863-46a5-be71-ba82f351f86c",
+    "key": "monthly_budget",
+    "value": "30000",
+    "created_at": "2025-08-28T17:53:27.405Z",
+    "updated_at": "2025-08-28T17:55:10.402Z"
+  },
+  {
+    "user_id": "227289cc-1863-46a5-be71-ba82f351f86c",
+    "key": "currency",
+    "value": "INR",
+    "created_at": "2025-08-28T17:53:27.405Z",
+    "updated_at": "2025-08-28T17:55:10.402Z"
+  },
+  {
+    "user_id": "227289cc-1863-46a5-be71-ba82f351f86c",
+    "key": "default_category",
+    "value": "Shopping",
+    "created_at": "2025-08-28T17:53:27.405Z",
+    "updated_at": "2025-08-28T17:55:10.402Z"
+  },
+  {
+    "user_id": "227289cc-1863-46a5-be71-ba82f351f86c",
+    "key": "custom_categories",
+    "value": [
+      "10000",
+      "3000",
+      "5000"
+    ],
+    "created_at": "2025-08-28T17:55:10.402Z",
+    "updated_at": "2025-08-28T17:55:10.402Z"
   }
 ]
